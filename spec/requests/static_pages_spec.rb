@@ -42,10 +42,10 @@ describe "StaticPages" do
   end
 
   describe "Home Page Title" do
-    it "should have the the keyword Home" do
+    it "should NOT have the the keyword Home" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
       visit "/static_pages/home"
-      page.should have_selector("title",text:"Home")
+      page.should_not have_selector("title",text:"|")
     end
   end
 
